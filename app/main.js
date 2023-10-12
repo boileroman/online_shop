@@ -1,9 +1,9 @@
-import './style.pcss'
-import javascriptLogo from './javascript.svg'
+import '../style.pcss'
+import javascriptLogo from '../javascript.svg'
 // import viteLogo from '../../../../../../vite.svg'
-import viteLogo from './public/vite.svg'
-import { setupCounter } from './counter.js'
-import { worker } from './src/mocks/browser'
+import viteLogo from '../public/vite.svg'
+import { setupCounter } from '../counter.js'
+import { worker } from '../src/mocks/browser'
 
 document.querySelector('#app').innerHTML = `
   <div>
