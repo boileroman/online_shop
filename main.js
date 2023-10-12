@@ -1,7 +1,9 @@
-import './style.css'
+import './style.pcss'
 import javascriptLogo from './javascript.svg'
-import viteLogo from '../../../../../../vite.svg'
+// import viteLogo from '../../../../../../vite.svg'
+import viteLogo from './public/vite.svg'
 import { setupCounter } from './counter.js'
+import { worker } from './src/mocks/browser'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -20,5 +22,7 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
-
+if (process.env.NODE_ENV === 'development') {
+  worker.start()
+}
 setupCounter(document.querySelector('#counter'))
